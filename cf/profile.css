@@ -1,0 +1,37 @@
+/* || Title / Name */
+.name span {
+    font-family: "Caveat", cursive;
+    /* font-family: var(--FF-Home-Link); */
+    /* height: 33.33vh; */
+    display: grid;
+    place-content: center;
+    padding: 2.5rem 0;
+    transform: rotate(-5deg);
+    font-size: calc(var(--FS) * 4);
+    /* background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-clip: text;
+    color: transparent; */
+}
+
+/* || Experience */
+.experience {
+    margin: 3rem 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience h3 {
+   font-size: calc(var(--FS)*1.2);
+   font-weight: 400;
+   line-height: 1.5;
+   letter-spacing: 0.8px;
+}
+.temp {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Caveat", cursive;
+    font-size: calc(var(--FS)*5);
+}

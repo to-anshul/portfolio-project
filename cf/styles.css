@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Caveat:wght@400..700&family=Rouge+Script&display=swap');
+
+/* || RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea {
+    font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONTS */
+    --FF: "Montserrat", sans-serif;
+    --FS: clamp(0.7rem, 2.2vw, 4rem);
+    --FF-Home-Link: "Caveat", cursive;;
+    --FS-Links: clamp(0.35rem, 1.1vw, 2rem);
+
+    /* COLORS */
+    --BGCOLOR: #111;
+    --FONT-COLOR: #F4F4F4;
+
+    /* LOGHT MODE */
+    /* --BGCOLOR: #F4F4F4;
+    --FONT-COLOR: #111; */
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+/* || GENERAL STYLES */
+html {
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR);
+}
+
+body {
+    color: var(--FONT-COLOR);
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+
+/* || SPECIFIC STYLES */
+.wrapper {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+}
+
+.main h1{
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    font-weight: 700;
+}
+
+.main h2{
+    height: 1.5em;
+}
+
+.home span{ 
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    font-family: var(--FF-Home-Link);
+    z-index: 100;
+}
+
+.blog span {
+    position: absolute;
+    top: 3.5%;
+    right: 3.5%;
+    font-size: var(--FS-Links);
+}
+
+.profile span {
+    position: absolute;
+    bottom: 3.5%;
+    right: 3.5%;
+    font-size: var(--FS-Links);
+}
+
+.contact span {
+    position: absolute;
+    bottom: 3.5%;
+    left: 2.5%;
+    font-size: var(--FS-Links);
+
+    transition: all 1s;
+}
+
+.link span{
+    padding: 0.5rem;
+}
+
+/* || CONTACT HOVER */
+
+.contact-link span:hover {
+    font-size: large;
+    cursor: pointer;
+}
+
+/* || IT FOLLOWS CLASS */
+
+.it-follows {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid #474747;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+
+    position: absolute;
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    transform-origin: 100% 100%;
+
+    z-index: -10;
+}
+
+.mouse-over-link{
+    color: var(--BGCOLOR);
+    background-color: var(--FONT-COLOR);
+    transform: scale(2);
+}
+
+.hovered-link:not(.svg-icon) {
+    color: var(--BGCOLOR);
+    font-size:larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hovered-link.svg-icon {
+    fill: var(--BGCOLOR);
+    border-color: var(--BGCOLOR);
+    cursor: pointer;
+}
+
+
+/* || SVG ICONS */
+.svg-icon{
+    fill: var(--FONT-COLOR);
+    width: 0.7rem;
+    height: auto;
+    position: absolute;
+    /* bottom: 3.5%;
+    right: 3.5%; */
+    margin-top: 0.7rem;
+}
+
+.svg-icon{
+    border: 0.5px solid var(--FONT-COLOR);
+    border-radius: 50%;
+    transform: translate(0%,0%);
+}
+
+/* || LIGHT MODE */
